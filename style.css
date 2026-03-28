@@ -5,6 +5,63 @@ body {
   color: #333;
 }
 
+.teachable-machine-section {
+  max-width: 600px;
+  margin: 50px auto 30px auto;
+  padding: 30px;
+  background-color: #e0f2f7; /* Light blue background for this section */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.teachable-machine-section h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.teachable-machine-section p {
+  margin-bottom: 25px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.teachable-machine-section button {
+  background-color: #28a745; /* Green button for start */
+  margin-top: 15px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.teachable-machine-section button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+#webcam-container {
+  margin-top: 25px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  overflow: hidden; /* To ensure webcam feed respects border-radius */
+  display: inline-block; /* Center the webcam if it's smaller than parent */
+}
+
+#label-container {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+  min-height: 50px; /* Give some space for labels */
+}
+
+#label-container div {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #0056b3;
+}
+
 main {
   max-width: 600px;
   margin: 50px auto;
@@ -14,7 +71,7 @@ main {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+main h1 {
   text-align: center;
   color: #333;
   margin-bottom: 30px;
