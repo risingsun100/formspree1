@@ -34,20 +34,39 @@ body {
   font-size: 1.2em;
   border-radius: 6px;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  color: white;
 }
 
-.teachable-machine-section button:hover {
+.teachable-machine-section button:hover:not(:disabled) {
   background-color: #218838;
   transform: translateY(-2px);
 }
 
-#webcam-container {
-  margin-top: 25px;
+.teachable-machine-section button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+input[type="file"] {
+  display: block; /* Make it a block element */
+  margin: 20px auto; /* Center it */
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+#uploaded-image {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
   border: 2px solid #007bff;
   border-radius: 8px;
-  overflow: hidden; /* To ensure webcam feed respects border-radius */
-  display: inline-block; /* Center the webcam if it's smaller than parent */
 }
+
 
 #label-container {
   margin-top: 20px;
@@ -104,7 +123,8 @@ textarea {
   min-height: 100px;
 }
 
-button {
+/* Existing button style for contact form, ensure it's not overridden by new section's button style */
+main button[type="submit"] {
   background-color: #007bff;
   color: white;
   padding: 12px 20px;
@@ -115,6 +135,11 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+main button[type="submit"]:hover {
   background-color: #0056b3;
+}
+
+/* Remove old webcam-container styles as it's no longer used */
+#webcam-container {
+  display: none;
 }
