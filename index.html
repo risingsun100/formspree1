@@ -9,7 +9,13 @@
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
-  <div class="teachable-machine-section">
+  <nav>
+    <ul>
+      <li><a href="#pet-face-test-section">동물상 테스트</a></li>
+      <li><a href="#contact-us-section">문의하기</a></li>
+    </ul>
+  </nav>
+  <div id="pet-face-test-section" class="teachable-machine-section">
     <h1>동물상 테스트 (강아지/고양이)</h1>
     <p>사진 파일을 업로드하여 당신의 동물상을 확인해보세요!</p>
     <div>Teachable Machine Image Model</div>
@@ -19,7 +25,7 @@
     <div id="label-container"></div>
   </div>
 
-  <main>
+  <main id="contact-us-section">
     <h1>문의하기</h1>
     <form action="https://formspree.io/f/mlgogndn" method="POST">
       <label for="name">이름:</label>
